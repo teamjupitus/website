@@ -10,6 +10,10 @@ body {
   /* color: black; */
 }
 
+.modal-body, .modal-title{
+  color: black;
+}
+
 .section-white {
   background-color: black;
   color: white;

@@ -142,7 +142,7 @@ body {
 #hero {
   /* margin-top: 20px; */
   color: white; /* Text color */
-  padding: 100px 0; /* Top and bottom padding */
+  padding: 60px 0; /* Top and bottom padding */
 }
 
 #hero h1 {
@@ -170,30 +170,7 @@ body {
 }
 
 /* Media query for screens below 992px (Bootstrap's lg breakpoint) */
-@media (max-width: 992px) {
-  #hero .col-lg-6 img {
-    margin-top: 50px; /* Adjust the top margin as needed */
-  }
 
-  #hero h1{
-    margin-top: 0;
-    font-size: 1.5rem;
-  }
-  #hero p{
-    font-size: 0.5rem;
-  }
-
-  #discover, #Contacthero {
-    padding: 10px 20px; /* Smaller padding */
-    font-size: 14px; /* Adjust font size */
-  }
-  .navbar {
-    background-color: #000000 !important;
-  }
-  .mb-4.text-center{
-    margin-top: 2rem;
-}
-}
 
 
 /* 3D Bulge Animation */
@@ -217,8 +194,8 @@ body {
 
 /* Increase Button Size */
 #hero .btn {
-  padding: 15px 30px; /* Add padding for larger buttons */
-  font-size: 1.4rem; /* Increase the font size in buttons */
+  padding: 10px 20px; /* Add padding for larger buttons */
+  font-size: 1rem; /* Increase the font size in buttons */
   border-radius: 50px; 
 }
 
@@ -321,8 +298,8 @@ body.dark-mode #contact textarea {
   text-align: center;
   margin-bottom: 30px;
   overflow: hidden;
-  height: 100%; /* Ensure the box takes full height of the container */
-  box-sizing: border-box; /* Make padding included in the box size */
+  height: 100%; 
+  box-sizing: border-box; 
   cursor: pointer;
 }
 
@@ -355,8 +332,8 @@ body.dark-mode #contact textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 20px;
+  text-align: justify;
+  padding: 10px 10px 10px 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
   box-sizing: border-box;
@@ -409,7 +386,62 @@ body.dark-mode #contact textarea {
     transition: opacity 0.3s;
 }
 
+#scrollToTop {
+  font-size: 24px;
+  color: white;
+  animation: moveUp 3s ease-in-out infinite, fadeOut 3s infinite;
+}
+
+#scrollToTop:hover {
+  font-size: 24px;
+  color: white;
+  animation: none;
+}
+
+/* Keyframes for moving the arrow upwards */
+@keyframes moveUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Keyframes for fading out the arrow */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .scroll-to-top:hover {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+@media (max-width: 992px) {
+  #hero .col-lg-6 img {
+    margin-top: 50px; /* Adjust the top margin as needed */
+  }
+
+#visionbox{
+  margin-top: 20px;
+}
+  #hero h1{
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+  #hero p{
+    font-size: 1rem;
+  }
+
+  .navbar {
+    background-color: #000000 !important;
+  }
+  .mb-4.text-center{
+    margin-top: 2rem;
+}
+}

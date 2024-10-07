@@ -1,341 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUPITUS</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jupitus - Taking Technology Beyond Horizon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Icons -->
+
+  <link rel="stylesheet" href="./css/styles.css"> <!-- Link to common styles -->
+  <link rel="stylesheet" href="./css/light-mode.css" id="theme-style">
+
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-gradient">
-        <!-- <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt="JUPITUS Logo" class="img-fluid" width="100"></a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Our Specialisation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#upcoming-services">Launching Soon</a></li>
-                <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#" id="logoimg"><img src="./img/logo.png" width="auto" height="50rem"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#fullstack">Full Stack Development</a></li>
+              <li><a class="dropdown-item" href="#uiux">UI/UX Designing</a></li>
+              <li><a class="dropdown-item" href="#graphic">Graphic Designing</a></li>
+              <li><a class="dropdown-item" href="#software-testing">Software Testing</a></li>
+              <li><a class="dropdown-item" href="#iot">IoT and Automation</a></li>
+              <li><a class="dropdown-item" href="#cybersecurity">Cybersecurity</a></li>
+              <li><a class="dropdown-item" href="#ai-data-science">AI and Data Science</a></li>
+              <li><a class="dropdown-item" href="#cloud-migration">Cloud Migration</a></li>
             </ul>
-        </div>
-    </nav>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="#products">HR Management System</a></li>
+              <li><a class="dropdown-item" href="#products">Project Management System</a></li>
+              <li><a class="dropdown-item" href="#products">Customer Resource Management</a></li>
+              <li><a class="dropdown-item" href="#products">Learning Management System</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Get in Touch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section d-flex align-items-center">
-        <div class="container text-right">
-            <img src="./assets/img/logo.png" alt="JUPITUS Logo" class="hero-logo img-fluid mx-auto d-block">
-            <h1 id="titlehero">We provide top-notch IT services and solutions to meet your business needs</h1>
-            <!-- <p id="subtitlehero">We provide top-notch IT services and solutions to meet your business needs.</p> -->
-        </div>
-        <div class="animated-image">
-            <img src="./assets/img/hero-img.png" alt="Animation" class="img-fluid">
-        </div>
-    </header>
 
-    <!-- About Us Section -->
-<section id="about" class="about-section py-5 bg-light">
-  <div class="container">
-      <h2>About Us</h2>
-      <p>At Jupitus, we are a passionate, dedicated, and highly skilled team committed to transforming businesses through cutting-edge IT solutions. With a focus on quality and efficiency, we bring life to your vision, ensuring seamless integration of technology into your operations.</p>
-      <h3>Our core values drive our work:</h3>
+  <!-- Hero Section -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
       <div class="row">
-          <div class="col-md-6">
-              <div class="core-value-box">
-                  <h4>Excellence</h4>
-                  <p>We strive for excellence in every project we undertake. Our attention to detail and commitment to delivering top-tier solutions set us apart.</p>
-              </div>
+        <div class="col-lg-6">
+          <h1 id="heading">Taking Technology<br>Beyond Horizon</h1>
+          <p id="paragraph">
+            Empowering your business through intelligent tech solutions. At Jupitus, we fuse innovation with expertise to streamline processes, enhance security, and unlock new possibilities in an ever-evolving digital landscape
+          </p>
+          <div class="d-flex">
+            <a href="#services" class="btn btn-warning me-3" id="discover">Discover our Solutions</a>
+            <a href="#contact" class="btn btn-light" id="Contacthero">Contact Us</a>
           </div>
-          <div class="col-md-6">
-              <div class="core-value-box">
-                  <h4>Innovation</h4>
-                  <p>In this era of AI and rapid technological advancements, we embrace innovation. We stay ahead of the curve, leveraging the latest tools and methodologies to propel your business forward.</p>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="core-value-box">
-                  <h4>Collaboration</h4>
-                  <p>We believe in teamwork. By collaborating closely with our clients, we gain a deep understanding of their needs, allowing us to tailor solutions that align perfectly with their goals.</p>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="core-value-box">
-                  <h4>Reliability</h4>
-                  <p>Trust is the foundation of our client relationships. You can rely on us to meet deadlines, exceed expectations, and provide unwavering support.</p>
-              </div>
-          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="./img/heroImg.png" class="img-fluid" alt="Hero Image">
+        </div>
       </div>
-      <p>Whether you need a robust portfolio website, a GPS timestamp camera app, or assistance with your tech startup, we’re here to make your vision a reality. Let’s embark on this exciting journey together!</p>
-  </div>
-</section>
-
-
-
-    <!-- Vision & Mission Section -->
-    <section class="vision-mission-section py-5">
-        <div class="container">
-            <center><h1>Vision & Mission</h1></center>
-            <br>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="vision-box">
-                        <img src="./assets/img/Vision.png" alt="Vision" class="img-fluid">
-                        <div class="text-section">
-                            <h3>Our Vision</h3>
-                            <p>To be the leading provider of innovative IT solutions that empower businesses to achieve their goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mission-box">
-                        <img src="./assets/img/visionandmission.jpeg" alt="Mission" class="img-fluid">
-                        <div class="text-section">
-                            <h3>Our Mission</h3>
-                            <p>To deliver high-quality IT services and products that exceed our clients' expectations and drive their success.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section py-5">
-        <div class="container">
-            <center> <h1>Our Specialisation</h1></center>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/logogen.jpeg" alt="Logo Design" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Logo Design</h3>
-                                <p>Creative and unique logo designs to represent your brand.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/socialmediapost.jpeg" alt="Social Media Posts" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Social Media Posts</h3>
-                                <p>Engaging social media content to boost your online presence.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/webmobile.jpeg" alt="Web and Mobile App Development" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Web and Mobile App Development</h3>
-                                <p>Innovative web and mobile app solutions for your business.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/ecommerce.jpeg" alt="Ecommerce Application" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Ecommerce Application</h3>
-                                <p>Robust ecommerce platforms to enhance your online store.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/UIUX.jpeg" alt="UI/UX Design and Testing" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>UI/UX Design and Testing</h3>
-                                <p>User-friendly designs and thorough testing to ensure quality.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/training.jpeg" alt="Job Oriented Training and Development" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Job Oriented Training and Development</h3>
-                                <p>Comprehensive training programs to enhance your skills.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Upcoming Services Section -->
-    <section id="upcoming-services" class="upcoming-services-section py-5 bg-light">
-        <div class="container">
-            <center>
-            <h1>Launching Soon</h1>
-            </center>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/SEO.jpeg" alt="SEO Services" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>SEO and Digital Marketing Services</h3>
-                                <p>Enhance your online visibility and attract more traffic.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/dm.jpeg" alt="Digital Marketing" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                              <h3>IoT Based Automation</h3>
-                              <p>Innovative IoT solutions for automated processes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./assets/img/iot.jpeg" alt="IoT Based Automation" class="img-fluid">
-                            </div>
-                            <div class="flip-card-back">
-                                
-                                <h3>AI and Data Science</h3>
-                                <p>Advanced AI and data science solutions to drive your business.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="blogs" class="blogs-section py-5">
-      <div class="container">
-        <center>
-          <h1>Latest Blogs</h1></center>
-          <br>
-          <div class="row">
-              <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="blog-card">
-                      <div class="blog-image">
-                          <img src="./assets/img/visionandmission.jpeg" class="img-fluid" alt="Blog Image">
-                      </div>
-                      <div class="blog-content">
-                          <h3 class="blog-title">Blog Title 1</h3>
-                          <p class="blog-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo efficitur turpis, sit amet gravida turpis blandit vel.</p>
-                          <a href="#" class="btn btn-primary">Read More</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="blog-card">
-                      <div class="blog-image">
-                          <img src="./assets/img/blog2.jpg" class="img-fluid" alt="Blog Image">
-                      </div>
-                      <div class="blog-content">
-                          <h3 class="blog-title">Blog Title 2</h3>
-                          <p class="blog-excerpt">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                          <a href="#" class="btn btn-primary">Read More</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="blog-card">
-                      <div class="blog-image">
-                          <img src="./assets/img/blog3.jpg" class="img-fluid" alt="Blog Image">
-                      </div>
-                      <div class="blog-content">
-                          <h3 class="blog-title">Blog Title 3</h3>
-                          <p class="blog-excerpt">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
-                          <a href="#" class="btn btn-primary">Read More</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+    </div>
   </section>
-  
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-section py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 contact-logo">
-                    <img src="./assets/img/logo.png" alt="JUPITUS Logo" class="img-fluid">
-                </div>
-                <div class="col-md-6">
-                    <h2>Contact Us</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer-section py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 JUPITUS. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fab fa-threads"></i></a>
-            </div>
-        </div>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+
+  <!-- About Us Section -->
+  <section id="about-us" class="section-white py-5">
+    <div class="row">
+      <!-- About Us Column -->
+      <div class="col-md-4">
+        <h2 id="AboutHeading">About Us</h2>
+        <p>
+          In today’s fast-paced world of emerging technologies, we are a dynamic team of tech enthusiasts
+          dedicated to driving your business growth. Leveraging cutting-edge innovations like AI,
+          we deliver exceptional products and services without compromising on quality, cost, or time.
+          Our commitment is to provide top-notch solutions that make your business stand out and gain
+          a competitive edge in the market.
+        </p>
+      </div>
+
+      <!-- Mission Column -->
+      <div class="col-md-4">
+        <div class="hover-box">
+          <div class="box-content">
+            <i class="fas fa-bullseye fa-3x" id="missionicon"></i>
+            <h3 id="missionheading">Our Mission</h3>
+          </div>
+          <div class="hover-text">
+            <p id="missiontext">
+              Our mission is to deliver innovative, high-quality tech solutions that drive business success.
+              We are committed to utilizing the latest advancements in technology, ensuring our clients gain
+              a competitive edge while maintaining excellence in quality, cost, and time efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision Column -->
+      <div class="col-md-4">
+        <div class="hover-box">
+          <div class="box-content">
+            <i class="fas fa-eye fa-3x" id="visionicon"></i>
+            <h3 id="visionheading">Our Vision</h3>
+          </div>
+          <div class="hover-text">
+            <p id="visiontext">
+              To be a global leader in leveraging emerging technologies, empowering businesses to achieve
+              unparalleled growth and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Services Section -->
+  <section id="services" class="section-gradient py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Services</h2>
+      <div class="row justify-content-center">
+        <!-- Service 1 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-laptop-code fa-3x mb-3"></i>
+            <h4>Full Stack Development</h4>
+            <p>We provide comprehensive development services from front-end design to back-end integration...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#fullStackModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-paint-brush fa-3x mb-3"></i>
+            <h4>UI/UX Designing</h4>
+            <p>Intuitive and engaging designs that enhance the user experience...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#uiuxModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-palette fa-3x mb-3"></i>
+            <h4>Graphic Designing</h4>
+            <p>Creative and impactful designs for branding and marketing materials...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#graphicModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-bug fa-3x mb-3"></i>
+            <h4>Software Testing</h4>
+            <p>Ensure your applications are reliable, secure, and perform optimally...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#testingModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-magic fa-3x mb-3"></i>
+            <h4>IoT & Automation</h4>
+            <p>Seamless automation solutions that connect devices for smart environments...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#iotModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-shield fa-3x mb-3"></i>
+            <h4>Cybersecurity</h4>
+            <p>Protect your business with cutting-edge cybersecurity solutions...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#cyberModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-line-chart fa-3x mb-3"></i>
+            <h4>AI and Data Science</h4>
+            <p>Unlock the power of data-driven insights and artificial intelligence...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#aiModal">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-tile">
+            <i class="fas fa-cloud fa-3x mb-3"></i>
+            <h4>Cloud Migration</h4>
+            <p>Seamlessly move your business operations to the cloud for better scalability...</p>
+            <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#cloudModal">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Full Stack Development -->
+  <div class="modal fade" id="fullStackModal" tabindex="-1" aria-labelledby="fullStackLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fullStackLabel">Full Stack Web and App Development</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          We provide comprehensive full stack web and app development services, covering everything from front-end
+          design to back-end integration. Our team ensures seamless functionality and a user-friendly experience,
+          utilizing the latest technologies to build robust and scalable applications tailored to your business needs.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for UI/UX Designing -->
+  <div class="modal fade" id="uiuxModal" tabindex="-1" aria-labelledby="uiuxLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uiuxLabel">UI/UX Designing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          We design intuitive and engaging user interfaces that provide a seamless user experience. Our focus is on
+          creating designs that are not only visually appealing but also easy to navigate, enhancing user satisfaction.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Graphic Designing -->
+  <div class="modal fade" id="graphicModal" tabindex="-1" aria-labelledby="graphicLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="graphicLabel">Graphic Designing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          We offer creative and impactful graphic design solutions for all your branding and marketing needs. Our
+          designs aim to leave a lasting impression and help establish a strong brand identity.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Software Testing -->
+  <div class="modal fade" id="testingModal" tabindex="-1" aria-labelledby="testingLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testingLabel">Software Testing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Ensure your applications are reliable, secure, and perform optimally with our rigorous software testing
+          services. We offer functional, performance, and security testing to ensure high-quality applications.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for IoT and Automation -->
+  <div class="modal fade" id="iotModal" tabindex="-1" aria-labelledby="iotLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="iotLabel">Internet of Things (IoT) and Automation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          We provide seamless automation solutions that connect devices for smart environments. From home automation to
+          industrial IoT, our solutions are tailored to enhance efficiency, security, and user convenience.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Cybersecurity -->
+  <div class="modal fade" id="cyberModal" tabindex="-1" aria-labelledby="cyberLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cyberLabel">Cybersecurity</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Protect your business with cutting-edge cybersecurity solutions. We offer threat detection, risk assessment,
+          and proactive measures to safeguard your critical assets and sensitive information from cyberattacks.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for AI and Data Science -->
+  <div class="modal fade" id="aiModal" tabindex="-1" aria-labelledby="aiLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aiLabel">AI and Data Science</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Unlock the power of data-driven insights and artificial intelligence to drive your business forward. Our AI
+          and Data Science services help you analyze big data, predict trends, and automate tasks for better
+          decision-making.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Cloud Migration -->
+  <div class="modal fade" id="cloudModal" tabindex="-1" aria-labelledby="cloudLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cloudLabel">Cloud Migration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Seamlessly move your business operations to the cloud for better scalability, cost savings, and security. Our
+          cloud migration services ensure minimal disruption and optimal performance in your new cloud environment.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Products Section -->
+  <section id="products" class="section-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Products</h2>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./img/HRMS.png" class="card-img-top" alt="HR Management System">
+            <div class="card-body">
+              <h5 class="card-title">HR Management System</h5>
+              <p class="card-text">Streamline and automate all HR processes from recruitment to payroll.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./img/pms.png" class="card-img-top" alt="Project Management System">
+            <div class="card-body">
+              <h5 class="card-title">Project Management System</h5>
+              <p class="card-text">Robust tools for planning, executing, and tracking projects.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./img/lms.png" class="card-img-top" alt="Learning Management System">
+            <div class="card-body">
+              <h5 class="card-title">Learning Management System</h5>
+              <p class="card-text">Centralized hub for training and development activities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-gradient py-5">
+    <div class="container">
+      <h2 class="text-center" id="contactustext">Contact Us</h2>
+      <p class="text-center mb-5" id="contactuspara">We’d love to hear from you! Fill out the form below to get in
+        touch.</p>
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-6 col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+          </form>
+        </div>
+
+        <!-- Contact Information and Social Media -->
+        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="mb-4 text-center">
+            <h5>Contact Information</h5>
+            <p><strong>Phone:</strong> +1 123 456 7890</p>
+            <p><strong>Email:</strong> contact@jupitus.com</p>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons text-center mb-4">
+            <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+
+          <!-- Copyright Information -->
+          <div class="text-center">
+            <p id="copyright">&copy; 2024 Jupitus. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FontAwesome (for icons) -->
+ 
+
+
+  <button id="theme-toggle" class="button">
+    <i class="fas fa-moon"></i> <!-- This will change based on the theme -->
+  </button>
+  <div class="scroll-to-top" id="scrollToTop">
+    ↑
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script> <!-- JavaScript for theme toggle -->
 </body>
+
 </html>

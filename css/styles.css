@@ -1,0 +1,415 @@
+/* Common layout and styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: "Istok Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Styles for the service tiles */
+.service-tile {
+  width: 100%;
+  max-width: 250px; /* Set the desired width */
+  height: 280px;    /* Set the desired height */
+  margin: 10px auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.service-tile h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-tile p {
+  height: 90px; /* Restricting the paragraph height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+}
+
+.read-more-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #764DCC;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background-color: #ec971f;
+}
+
+.services-section {
+  height: auto; /* This could restrict the height */
+  overflow: auto; /* This causes a scrollbar to appear */
+}
+
+/* Ensure service section does not exceed height */
+#services {
+  min-height: 600px; /* Set the required min height */
+ 
+}
+
+/* Initial state before the section is visible */
+.section-gradient, .section-white {
+  opacity: 0;
+  transform: translateY(50px); /* Slightly off-screen */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When the section is in view, make it fully visible */
+.section-gradient.visible, .section-white.visible {
+  opacity: 1;
+  transform: translateY(0); /* Return to original position */
+}
+
+/* Navbar Styles */
+#navbar {
+  transition: background-color 0.3s ease;
+}
+
+/* Transparent Background */
+.navbar {
+  background-color: transparent !important;
+}
+
+/* Text Color */
+/* Nav link default state with transparent border */
+.navbar .nav-link {
+  color: white !important;
+  font-family: "Istok Web", sans-serif;
+  margin-left: 60px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-left: 2px solid transparent; /* Transparent border */
+  border-right: 2px solid transparent; /* Transparent border */
+  transition: border 0.4s ease; /* Smooth transition for the border */
+}
+
+/* Hover state: Add white borders with a fade effect */
+.navbar .nav-link:hover {
+  color: rgb(247, 224, 21) !important;
+  border-left: 2px solid #fff; /* Add left border on hover */
+  border-right: 2px solid #fff; /* Add right border on hover */
+  transition: border 0.4s ease; /* Smooth transition for the border */
+}
+
+
+/* Change to Black Background */
+.navbar.scrolled {
+  background-color: black !important;
+  /* Change to black when scrolled */
+}
+
+/* Ensure text remains white on scroll */
+.navbar.scrolled .nav-link {
+  color: white !important;
+  /* Keep text color white when scrolled */
+}
+.navbar.scrolled .navbar-brand {
+  color: white !important;
+  /* Keep text color white when scrolled */
+}
+
+/* Override Bootstrap styles for smooth hover functionality */
+.navbar .dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar .dropdown.show .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+#hero {
+  /* margin-top: 20px; */
+  color: white; /* Text color */
+  padding: 100px 0; /* Top and bottom padding */
+}
+
+#hero h1 {
+  font-size: 3rem; /* Larger font size for the heading */
+  text-align: center;
+}
+
+#hero p {
+  font-size: 1.1rem; /* Font size for paragraph */
+  margin-bottom: 1.5rem; /* Space below paragraph */
+}
+
+.btn {
+  border-radius: 50px; /* Rounded button edges */
+  font-weight: 500;
+}
+
+
+/* Add this to your CSS */
+
+#hero img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  animation: bulge 3s infinite ease-in-out; /* Apply continuous animation */
+}
+
+/* Media query for screens below 992px (Bootstrap's lg breakpoint) */
+@media (max-width: 992px) {
+  #hero .col-lg-6 img {
+    margin-top: 50px; /* Adjust the top margin as needed */
+  }
+
+  #hero h1{
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  #hero p{
+    font-size: 0.5rem;
+  }
+
+  #discover, #Contacthero {
+    padding: 10px 20px; /* Smaller padding */
+    font-size: 14px; /* Adjust font size */
+  }
+  .navbar {
+    background-color: #000000 !important;
+  }
+  .mb-4.text-center{
+    margin-top: 2rem;
+}
+}
+
+
+/* 3D Bulge Animation */
+@keyframes bulge {
+  0%, 100% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(.9); /* Slightly bulge out */
+  }
+}
+
+
+#hero h1 {
+  font-size: 3.5rem; /* Adjust the font size for larger heading */
+}
+
+#hero p {
+  font-size: 1.5rem; /* Adjust the font size for the paragraph */
+}
+
+/* Increase Button Size */
+#hero .btn {
+  padding: 15px 30px; /* Add padding for larger buttons */
+  font-size: 1.4rem; /* Increase the font size in buttons */
+  border-radius: 50px; 
+}
+
+#hero .btn:hover {
+  border-radius: 20px; /* Keep the rounded edges */
+  font-weight: 500;
+}
+
+
+#theme-toggle {
+  position: fixed; /* Keep it fixed in position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  width: 60px; /* Set a fixed width */
+  height: 60px; /* Set a fixed height */
+  border-radius: 50%; /* Make it circular */
+  background-color: rgba(216, 247, 190, 0.233); /* Slightly transparent yellow background */
+  color: rgb(0, 0, 0); /* Text color */
+  border: none; /* Remove border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  display: flex; /* Flexbox for centering icon */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 24px; /* Increase icon size */
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+#theme-toggle:hover {
+  background-color: rgb(255, 255, 255); /* Change background on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+}
+
+.btn-light i {
+  color: black;
+}
+
+#contact {
+  background-color: #f8f9fa; /* Light mode background */
+  color: black; /* Light mode text color */
+  padding: 50px 0; /* Vertical padding */
+}
+
+#contact h2 {
+  margin-bottom: 20px; /* Space below heading */
+}
+
+#contact form {
+  background-color: white; /* Form background */
+  padding: 20px; /* Padding inside the form */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #contact {
+  background-color: #333; /* Dark mode background */
+  color: white; /* Dark mode text color */
+}
+
+body.dark-mode #contact form {
+  background-color: #444; /* Dark mode form background */
+  border: 1px solid #555; /* Dark mode border */
+}
+
+/* Adjust input and textarea colors for dark mode */
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+  background-color: #555; /* Dark mode input background */
+  color: white; /* Dark mode input text color */
+  border: 1px solid #666; /* Dark mode input border */
+}
+
+
+#about-us {
+  color: #000; /* Text color for normal content */
+  text-align: justify;
+  padding: 20px 20px;
+}
+
+.hover-box {
+  position: relative;
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  overflow: hidden;
+  height: 100%; /* Ensure the box takes full height of the container */
+  box-sizing: border-box; /* Make padding included in the box size */
+  cursor: pointer;
+}
+
+.hover-box .box-content {
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-box i {
+  margin-bottom: 15px;
+  color: #6c757d; /* Icon color */
+  font-size: 3rem; /* Adjust size of the icon */
+}
+
+.hover-box h3 {
+  font-size: 1.5rem;
+}
+
+.hover-box .hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(116.59deg, #764DCC 12.56%, #4B28B8 66.85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+
+.hover-box:hover .hover-text {
+  opacity: 1;
+}
+
+.hover-box:hover .box-content {
+  opacity: 0;
+}
+
+#visiontext,#missiontext{
+  color: #ffffff;
+}
+
+#heading{
+  margin-top: 5rem;
+  font-size: 20rem;
+  text-align: justify;
+}
+
+#paragraph{
+  font-size: 20rem;
+  text-align: justify;
+}
+
+#missionicon, #visionicon{
+  color: rgb(0, 122, 20);
+}
+
+#missionheading, #visionheading{
+  font-size: 2.5rem;
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 3%; /* Adjust based on your light/dark mode button position */
+    display: none; /* Initially hidden */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: #ffffff solid;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+

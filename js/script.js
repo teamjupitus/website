@@ -18,4 +18,7 @@ window.onload = function ()
 
     // Load About Section HTML
     loadSection('./html/about.html', 'about-section');
+
+    // Load About Section HTML
+    loadSection('./html/services.html', 'services-section');
 };

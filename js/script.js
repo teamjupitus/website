@@ -19,6 +19,15 @@ window.onload = function ()
     // Load About Section HTML
     loadSection('./html/about.html', 'about-section');
 
-    // Load About Section HTML
+    // Load Services Section HTML
     loadSection('./html/services.html', 'services-section');
+
+    // Load Product Section HTML
+    loadSection('./html/products.html', 'product-section');
+
+    // Load Contact Section HTML
+    loadSection('./html/contact.html', 'contact-section');
+
+    // Load Footer Section HTML
+    loadSection('./html/footer.html', 'footer-section');
 };

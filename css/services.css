@@ -12,7 +12,7 @@
 .underline {
     width: 100px;
     height: 3px;
-    background-color: yellow;
+    background-color: #c7a4fd;
     margin: 10px auto 0;
     border-radius: 3px;
 }
@@ -41,6 +41,32 @@
 
 .service-tile:hover .image-container img {
     transform: scale(1.1);
+}
+
+.dots {
+    cursor: pointer;
+    color: #0275d8;
+    /* Default color for Read More */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.dots:hover {
+    color: #d9534f;
+    /* Hover color (optional, if you want it to change on hover) */
+}
+
+/* Ensure the description is styled appropriately */
+.full-text {
+    display: none;
+    /* Hidden by default */
+    transition: display 0.3s ease;
+    /* Smooth transition for expanding text */
+}
+
+.short-text {
+    display: inline;
+    /* Show the short text initially */
 }
 
 .content-container {

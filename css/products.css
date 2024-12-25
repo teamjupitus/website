@@ -1,0 +1,130 @@
+/* Base Styles for the Product Section */
+.product-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* Increased spacing between products */
+    margin: 2rem 1rem;
+    /* Added padding around the section */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* Prevents content from touching screen edges */
+}
+
+/* Product Item - Default Layout */
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* Reverse Layout for Alternating Items */
+.product-item.reverse {
+    flex-direction: row-reverse;
+    /* display: flex; */
+    align-items: center;
+    gap: 10rem;
+    justify-content: space-between;
+}
+
+
+
+/* Product Image Styles */
+.product-image img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product Text Styles */
+.product-text {
+    max-width: 600px;
+}
+
+.product-text-reverse {
+    max-width: 600px;
+}
+
+.product-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.product-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-text ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.product-text ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #aa77f7;
+    /* Gold color for checkmarks */
+}
+
+/* Spacing Around Product Items */
+.product-item {
+    padding: 1rem 0;
+    /* Adds vertical padding for better separation */
+}
+
+.product-item.reverse {
+    padding: 0 1rem;
+    /* Adds vertical padding for better separation */
+}
+
+.product-item:last-child {
+    border-bottom: none;
+    /* Removes the bottom border from the last product */
+}
+
+/* Responsive Styles for Mobile and Tablet Views */
+@media (max-width: 768px) {
+    .product-item {
+        flex-direction: column;
+        /* Stacks image and text vertically */
+        text-align: center;
+        /* Centers content on smaller screens */
+    }
+
+    .product-item.reverse {
+        flex-direction: column;
+        /* Ensures reverse doesn't break stacking */
+    }
+
+    .product-image img {
+        max-width: 70%;
+        /* Slightly smaller images for better fit */
+    }
+
+    .product-text ul li {
+        text-align: left;
+    }
+
+    .product-text {
+        margin-top: 1rem;
+        /* Adds spacing between image and text */
+    }
+}
+
+/* Larger Screens (Optional Improvements) */
+@media (min-width: 1024px) {
+    .product-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        /* Adds extra spacing on larger screens */
+    }
+}

@@ -14,14 +14,76 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
+/* Animation Keyframes */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Initial State for Sections */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Left-to-right animation */
+.animate-from-left {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+/* Right-to-left animation */
+.animate-from-right {
+    animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+
+
 /* Navbar background for desktop when scrolled */
 .navbar.scrolled-desktop {
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    background-color: #7C40AC !important;
+}
+
+/* Logo color change when navbar is scrolled */
+.navbar.scrolled-desktop #logo {
+    color: #ffc94e !important;
+    /* Change logo color to yellow */
+}
+
+/* Navbar links hover color when navbar is scrolled */
+.navbar.scrolled-desktop .nav-link:hover {
+    color: violet !important;
+    /* Change link hover color to yellow */
+}
+
+/* Navbar links active color when navbar is scrolled */
+.navbar.scrolled-desktop .nav-link.active {
+    color: #ffc94e !important;
+    /* Change active link color to yellow */
 }
 
 
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    background-color: #7C40AC !important;
 }
 
 .navbar.mobile-navbar {
@@ -33,6 +95,10 @@ body {
     color: #ffffff;
     margin-right: 1rem;
     font-size: 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: #7C40AC !important;
 }
 
 .navbar .nav-link.active {

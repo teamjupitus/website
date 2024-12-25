@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    /* Increased spacing between products */
+    /* Consistent spacing between products */
     margin: 2rem 1rem;
     /* Added padding around the section */
     padding-left: 1rem;
@@ -15,116 +15,104 @@
 .product-item {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    /* Adjusted gap to ensure consistent spacing */
     justify-content: space-between;
 }
 
 /* Reverse Layout for Alternating Items */
 .product-item.reverse {
     flex-direction: row-reverse;
-    /* display: flex; */
     align-items: center;
-    gap: 10rem;
-    justify-content: space-between;
+    gap: 3rem;
+    /* Ensures consistent spacing between image and text */
 }
 
-
-
 /* Product Image Styles */
+.product-image {
+    flex: 1;
+    /* Ensures the image takes an equal portion of space */
+    display: flex;
+    justify-content: center;
+    /* Centers the image */
+    align-items: center;
+}
+
 .product-image img {
-    max-width: 60%;
+    max-width: 70%;
+    /* Ensures the image scales properly */
     height: auto;
     border-radius: 8px;
 }
 
 /* Product Text Styles */
-.product-text {
-    max-width: 600px;
-}
-
+.product-text,
 .product-text-reverse {
-    max-width: 600px;
+    flex: 1;
+    /* Ensures the text takes an equal portion of space */
 }
 
-.product-text h2 {
-    font-size: 1.5rem;
+.product-text h2,
+.product-text-reverse h2 {
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
-.product-text p {
+.product-text p,
+.product-text-reverse p {
     margin-bottom: 1rem;
     line-height: 1.6;
 }
 
-.product-text ul {
+.product-text ul,
+.product-text-reverse ul {
     list-style: none;
     padding: 0;
 }
 
-.product-text ul li {
+.product-text ul li,
+.product-text-reverse ul li {
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
 }
 
-.product-text ul li::before {
+.product-text ul li::before,
+.product-text-reverse ul li::before {
     content: '✔';
     position: absolute;
     left: 0;
     color: #aa77f7;
-    /* Gold color for checkmarks */
-}
-
-/* Spacing Around Product Items */
-.product-item {
-    padding: 1rem 0;
-    /* Adds vertical padding for better separation */
-}
-
-.product-item.reverse {
-    padding: 0 1rem;
-    /* Adds vertical padding for better separation */
-}
-
-.product-item:last-child {
-    border-bottom: none;
-    /* Removes the bottom border from the last product */
+    /* Checkmark color */
 }
 
 /* Responsive Styles for Mobile and Tablet Views */
 @media (max-width: 768px) {
-    .product-item {
+
+    .product-item,
+    .product-item.reverse {
         flex-direction: column;
         /* Stacks image and text vertically */
         text-align: center;
-        /* Centers content on smaller screens */
-    }
-
-    .product-item.reverse {
-        flex-direction: column;
-        /* Ensures reverse doesn't break stacking */
+        /* Centers content */
+        gap: 1.5rem;
+        /* Smaller gap for mobile */
     }
 
     .product-image img {
-        max-width: 70%;
-        /* Slightly smaller images for better fit */
+        max-width: 80%;
+        /* Smaller images for better fit */
     }
 
-    .product-text ul li {
-        text-align: left;
-    }
-
-    .product-text {
+    .product-text,
+    .product-text-reverse {
         margin-top: 1rem;
         /* Adds spacing between image and text */
     }
-}
 
-/* Larger Screens (Optional Improvements) */
-@media (min-width: 1024px) {
-    .product-section {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        /* Adds extra spacing on larger screens */
+    .product-text h2,
+    .product-text-reverse h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 }

@@ -16,9 +16,11 @@ p {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 columns */
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1200px;
+    /* Adjusted width */
     width: 100%;
 }
 
@@ -74,4 +76,17 @@ p {
 .contact-form button:hover {
     background-color: #e08e00;
     color: #fff;
+}
+
+/* New style for the image section */
+.contact-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }

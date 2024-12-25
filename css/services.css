@@ -1,139 +1,96 @@
-/* General Service Section Styles */
+/* General Section Styling */
 .services-section {
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
+    padding: 60px 0;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #333;
 }
 
 .underline {
-    width: 100px;
-    height: 3px;
-    background-color: #c7a4fd;
-    margin: 10px auto 0;
-    border-radius: 3px;
+    width: 80px;
+    height: 4px;
+    background-color: #6c63ff;
+    margin: 10px auto;
+    border-radius: 2px;
 }
 
-/* Service Tile Styles */
-.service-tile {
-    position: relative;
-    text-align: center;
+.section-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Service Card Styling */
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    height: 420px;
+    /* Set a fixed height for the cards */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    height: 200px;
     overflow: hidden;
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    /* Adjust height as needed */
-    overflow: hidden;
-}
-
-.image-container img {
+.service-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-.service-tile:hover .image-container img {
+.service-card:hover .service-image img {
     transform: scale(1.1);
 }
 
-.dots {
-    cursor: pointer;
-    color: #0275d8;
-    /* Default color for Read More */
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.dots:hover {
-    color: #d9534f;
-    /* Hover color (optional, if you want it to change on hover) */
-}
-
-/* Ensure the description is styled appropriately */
-.full-text {
-    display: none;
-    /* Hidden by default */
-    transition: display 0.3s ease;
-    /* Smooth transition for expanding text */
-}
-
-.short-text {
-    display: inline;
-    /* Show the short text initially */
-}
-
-.content-container {
-    position: absolute;
-    bottom: -50px;
-    /* Hidden by default on desktop */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
+.service-content {
     padding: 20px;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: bottom 0.3s ease-in-out;
+    text-align: center;
+    height: 200px;
+    /* Fixed height for content container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Hover Animation for Larger Screens */
-@media (min-width: 1024px) {
-    .service-tile:hover .content-container {
-        bottom: 20px;
-        /* Reveal on hover for larger screens */
-    }
+.service-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
 }
 
-/* Always Show Content for Tablets */
-@media (max-width: 1024px) {
-    .content-container {
-        position: absolute;
-        bottom: 20px;
-        /* Always visible on tablet */
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        padding: 20px;
-        width: 90%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Show 2 columns for tablets */
-    .services-section .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
-    }
-
-    .services-section .col-md-4 {
-        flex: 0 0 calc(50% - 10px);
-    }
+.service-content p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Ensures long text does not break layout */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limit description to 3 lines */
+    -webkit-box-orient: vertical;
 }
 
-/* Adjustments for Smaller Screens */
-@media (max-width: 767px) {
-    .content-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        bottom: auto;
-        padding: 15px;
-        width: 90%;
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-
-    /* Show 1 column for smaller screens */
-    .services-section .col-md-4 {
-        flex: 0 0 100%;
+/* Responsive Grid */
+@media (max-width: 992px) {
+    .service-card {
+        margin-bottom: 30px;
+        height: auto;
+        /* Adjust for smaller screens */
     }
 }

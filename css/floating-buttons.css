@@ -1,0 +1,199 @@
+/* Default Styles (Desktop and Larger Screens) */
+#floating-buttons {
+    position: fixed;
+    bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    /* This ensures buttons are spaced out on the left and right */
+    width: 100%;
+    /* Take up the full width of the screen */
+    padding: 0 20px;
+    /* Adds spacing on the sides */
+    z-index: 1000;
+}
+
+#contact-us {
+    color: #fff;
+    width: auto;
+    /* Adjust width for rounded rectangle */
+    height: auto;
+    /* Let the height adjust to content */
+    border-radius: 30px;
+    /* Rounded rectangle shape */
+    padding: 10px 20px;
+    /* Adjust padding to fit text */
+    font-size: 18px;
+    /* Adjust font size */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #6610f2;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-us:hover {
+    background-color: #ffc94e;
+    /* Darker purple on hover */
+    color: #000;
+    /* Optional: Change text color */
+    transform: scale(1.05);
+    /* Subtle zoom effect */
+}
+
+/* Call icon */
+#contact-us i {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    /* Smooth transition when shaking stops */
+}
+
+#contact-us:hover i {
+    animation: vibrate 0.5s infinite;
+    /* Apply the vibration animation continuously */
+}
+
+#move-to-top i {
+    font-size: 40px;
+    /* Increase size of arrow icon */
+    margin-right: 5px;
+
+}
+
+#move-to-top i:hover {
+    font-size: 40px;
+    /* Increase size of arrow icon */
+    margin-right: 5px;
+    color: #ffc94e;
+
+}
+
+#move-to-top {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    /* Transparent background */
+    color: #6610f2;
+    /* Purple icon color */
+    opacity: 1;
+    /* Fully visible by default */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth transitions */
+}
+
+#move-to-top.hidden {
+    opacity: 0;
+    /* Hide when the "hidden" class is added */
+    pointer-events: none;
+    /* Disable interactions when hidden */
+    transform: scale(0.8);
+    /* Optional: Add a subtle shrink effect */
+}
+
+/* Floating Button Base Styles */
+.floating-button {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    animation: zoom-in-out 1.5s infinite;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.floating-button:hover {
+    transform: scale(1.2);
+}
+
+.floating-button i {
+    font-size: 28px;
+    /* Increase icon size */
+    margin-right: 5px;
+}
+
+.floating-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+@keyframes zoom-in-out {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes vibrate {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media Query for Mobile View (Screen Width ≤ 768px) */
+@media (max-width: 768px) {
+
+    /* Button will be hidden in the Hero section only */
+    #hero-section #contact-us {
+        display: none;
+    }
+
+    #contact-us {
+        padding: 8px 16px;
+        /* Decrease padding */
+        font-size: 14px;
+        /* Smaller font size */
+        border-radius: 20px;
+        display: block;
+    }
+
+    #move-to-top {
+        width: 50px;
+        /* Smaller size */
+        height: 50px;
+        /* Smaller size */
+    }
+
+    #move-to-top i {
+        font-size: 32px;
+        /* Decrease icon size */
+    }
+
+    #contact-us i {
+        font-size: 15px;
+    }
+
+    .floating-button {
+        width: 50px;
+        /* Smaller size */
+        height: 50px;
+        /* Smaller size */
+    }
+
+    .floating-button i {
+        font-size: 24px;
+        /* Decrease icon size */
+    }
+}

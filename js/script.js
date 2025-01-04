@@ -75,3 +75,21 @@ window.onload = function ()
     loadSection('./html/contact.html', 'contact-section');
     loadSection('./html/footer.html', 'footer-section');
 };
+
+document.querySelectorAll('a.nav-link').forEach(link =>
+{
+    link.addEventListener('click', function (e)
+    {
+        e.preventDefault(); // Prevent default link behavior
+        const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement)
+        {
+            // Get the position of the target section and subtract the navbar height
+            const offset = targetElement.getBoundingClientRect().top + window.scrollY - 80; // Adjust for navbar height
+            window.scrollTo({ top: offset, behavior: 'smooth' }); // Smooth scroll to the target
+        }
+    });
+});
+

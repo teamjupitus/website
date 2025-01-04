@@ -4,7 +4,13 @@
     color: #fff;
     text-align: center;
     padding: 20px;
+    position: relative;
+    /* Ensure it can be layered */
+    z-index: 100;
+    /* margin-bottom: 80px; */
+    /* Adjust the z-index to bring it above other elements */
 }
+
 
 .footer p {
     margin: 5px 0;

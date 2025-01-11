@@ -7,24 +7,106 @@ body {
     scroll-behavior: smooth;
 }
 
-
 /* Navbar */
 .navbar {
     background-color: transparent !important;
-    padding: 1rem 2rem;
-    transition: background-color 0.3s ease-in-out;
-    height: 70px;
-    /* Adjust as needed */
+    padding: 0.5rem 1rem;
+    /* Adjust padding for smaller views */
+    height: 10vh;
+    /* Allow dynamic height */
     display: flex;
     align-items: center;
+    overflow: hidden;
+    /* Prevent elements from spilling out */
+    transition: background-color 0.3s ease-in-out;
 }
 
+/* Navbar Logo */
 .navbar-logo {
-    height: 100px;
-    /* Adjust height */
+    height: 4rem;
+    /* Adjust logo size */
     width: auto;
     /* Maintain aspect ratio */
-    margin-top: 30px;
+    margin-top: 10px;
+    /* Remove unnecessary margin */
+}
+
+/* Toggler Icon (Hamburger Menu) */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: #ffffff;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: orange !important;
+}
+
+.navbar .nav-link.active {
+    color: #c7a4fd;
+}
+
+/* Scrolled Navbar */
+.navbar.scrolled-desktop {
+    background-color: #000000 !important;
+}
+
+.navbar.scrolled-desktop #logo {
+    color: #ffc94e !important;
+    /* Change logo color to yellow */
+}
+
+.navbar.scrolled-desktop .nav-link:hover {
+    color: orange !important;
+    /* Change link hover color to yellow */
+}
+
+.navbar.scrolled-desktop .nav-link.active {
+    color: #ffc94e !important;
+    /* Change active link color to yellow */
+}
+
+.navbar.scrolled {
+    background-color: #7C40AC !important;
+}
+
+.navbar.mobile-navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    padding: 0.5rem 1rem;
+}
+
+#logo {
+    color: #c7a4fd;
+}
+
+/* Responsive Design for Mobile Views */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: 80px;
+        /* Allow wrapping for smaller views */
+    }
+
+    .navbar-logo {
+        height: 60px;
+        margin-top: 18px;
+        /* Reduce logo size for smaller screens */
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        /* Push toggler to the far right */
+    }
+
+    .navbar .nav-link {
+        padding: 0.5rem 0;
+        /* Reduce padding for nav links */
+    }
 }
 
 /* Animation Keyframes */
@@ -67,61 +149,4 @@ body {
 /* Right-to-left animation */
 .animate-from-right {
     animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-
-
-/* Navbar background for desktop when scrolled */
-.navbar.scrolled-desktop {
-    background-color: #000000 !important;
-}
-
-/* Logo color change when navbar is scrolled */
-.navbar.scrolled-desktop #logo {
-    color: #ffc94e !important;
-    /* Change logo color to yellow */
-}
-
-/* Navbar links hover color when navbar is scrolled */
-.navbar.scrolled-desktop .nav-link:hover {
-    color: orange !important;
-    /* Change link hover color to yellow */
-}
-
-/* Navbar links active color when navbar is scrolled */
-.navbar.scrolled-desktop .nav-link.active {
-    color: #ffc94e !important;
-    /* Change active link color to yellow */
-}
-
-
-.navbar.scrolled {
-    background-color: #7C40AC !important;
-}
-
-.navbar.mobile-navbar {
-    background-color: rgba(0, 0, 0, 0.9) !important;
-    padding: 0.5rem 1rem;
-}
-
-.navbar .nav-link {
-    color: #ffffff;
-    margin-right: 1rem;
-    font-size: 1rem;
-}
-
-.navbar .nav-link:hover {
-    color: orange !important;
-}
-
-.navbar .nav-link.active {
-    color: #c7a4fd;
-}
-
-#logo {
-    color: #c7a4fd;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

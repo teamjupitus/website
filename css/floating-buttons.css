@@ -30,7 +30,7 @@
 }
 
 #contact-us:hover {
-    background-color: #ffc94e;
+    background-color: orange;
     /* Darker purple on hover */
     color: #000;
     /* Optional: Change text color */
@@ -61,7 +61,7 @@
     font-size: 40px;
     /* Increase size of arrow icon */
     margin-right: 5px;
-    color: #ffc94e;
+    color: orange;
 
 }
 

@@ -17,7 +17,7 @@
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     /* Adjust font size */
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -26,6 +26,32 @@
 .hero-section p {
     font-size: 1.4rem;
     margin-bottom: 2.5rem;
+}
+
+.jupitus-gradient {
+    /* font-family: 'arial', sans-serif; */
+    /* Apply the font */
+    background: linear-gradient(45deg, #ff7a18, #ffc94e);
+    /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-weight: bold;
+    /* Adjust based on the font style */
+    animation: zoomIn 1.5s ease-in-out;
+    font-size: 3.5rem;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Image Styling */
@@ -64,7 +90,7 @@
 }
 
 .btn-know-more:hover {
-    background-color: #ffc94e;
+    background-color: orange;
     color: #000;
 }
 
@@ -77,7 +103,7 @@
 }
 
 .btn-outline-light:hover {
-    background-color: #ffffff;
+    background-color: orange;
     color: #000;
 }
 

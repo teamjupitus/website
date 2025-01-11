@@ -104,7 +104,7 @@
 }
 
 .checkout-btn:hover {
-    background-color: #ffc94e;
+    background-color: orange;
     /* #ffc94e background on hover */
     color: black;
     /* Black text on hover */

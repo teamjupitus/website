@@ -13,6 +13,18 @@ body {
     background-color: transparent !important;
     padding: 1rem 2rem;
     transition: background-color 0.3s ease-in-out;
+    height: 70px;
+    /* Adjust as needed */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 100px;
+    /* Adjust height */
+    width: auto;
+    /* Maintain aspect ratio */
+    margin-top: 30px;
 }
 
 /* Animation Keyframes */
@@ -61,7 +73,7 @@ body {
 
 /* Navbar background for desktop when scrolled */
 .navbar.scrolled-desktop {
-    background-color: #7C40AC !important;
+    background-color: #000000 !important;
 }
 
 /* Logo color change when navbar is scrolled */
@@ -72,7 +84,7 @@ body {
 
 /* Navbar links hover color when navbar is scrolled */
 .navbar.scrolled-desktop .nav-link:hover {
-    color: violet !important;
+    color: orange !important;
     /* Change link hover color to yellow */
 }
 
@@ -99,7 +111,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: #7C40AC !important;
+    color: orange !important;
 }
 
 .navbar .nav-link.active {
